@@ -4,8 +4,8 @@ This repository contains the official code for the paper:
 [Training and Generating Neural Networks in Compressed Weight Space](https://openreview.net/forum?id=qU1EUxdVd_D).
 
 The main code includes:
-* DCT LSTM: LSTM whose weights are encoded by discrete cosine transform (DCT).
-* DCT Fast weight RNNs: RNNs whose weights are encoded by DCT and the DCT coefficients are parameterized by LSTMs.
+* DCT LSTM: LSTMs whose weights are encoded by discrete cosine transform (DCT).
+* DCT fast weight RNN: RNNs whose weights are encoded by DCT, and the DCT coefficients are parameterized by LSTMs.
 
 The language modeling experiments reported in the paper were produced by porting code (with minor changes due to some clean-up) of this repository in a fork of [this toolkit](https://github.com/manuvn/lpRNN-awd-lstm-lm).
 
@@ -13,7 +13,9 @@ The language modeling experiments reported in the paper were produced by porting
 ## Requirements
 
 * `torch_dct` (can be installed via `pip install torch_dct`)
-* PyTorch with a version compatible with `torch_dct`. Our experiments were conducted using PyTorch version `1.6.0` .
+* PyTorch with a version compatible with `torch_dct`. 
+ 
+Our experiments were conducted using PyTorch version `1.6.0` .
 More recent versions are apparently not compatible with torch_dct (at least at the time of writing this file).
 We recommend to run `python custom_layer.py` to check the compatibility.
 
